@@ -1,0 +1,797 @@
+/*                            CABECERA                           */
+
+body
+{
+    margin: 0px;
+    background:url(img/DarkSoulsBackground2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: fantasy sans-serif;
+    min-width: 960px;
+    color: white;
+}
+header
+{
+    background: rgba(0, 0, 0, 0.80);    
+    margin-left: auto;
+    margin-right: auto;    
+    width: 90%;    
+    min-width: inherit;
+    padding: 10px;     
+    text-align: center;
+    display: table;
+}
+header
+{    
+    position: sticky;
+    top: 1px;
+    z-index:2000;
+}
+section.principal
+{
+    margin-top: 20px;
+}
+.principal a img
+{
+    vertical-align: middle;
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+}
+.principal a img:hover
+{
+    border-color: transparent;
+    background: rgba(255, 223, 128, 0.5);
+}
+#logo:hover, #perfillink:hover
+{
+    background: rgba(255, 223, 128, 0.5);  
+    cursor: pointer;
+}
+input[type="submit"]:not(.subbutton), input[type="text"], select, input[type="password"], input[type="email"], input[type="date"], li input[type="reset"], input[type="button"]
+{
+    background: rgba(255, 223, 128, 0.5);   
+    border: 0px;
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 16px;
+
+}
+::placeholder
+{
+    color: white;
+    opacity: 1;
+}
+input[type="submit"]:hover, input[type="reset"]:hover, input[type="button"]:hover
+{
+    cursor: pointer;
+}
+#busqueda, #busquedacat
+{    
+    width: 40%;    
+}
+.buscacion, #busquedafeini, #busquedafefin
+{
+    width: 20%;
+}
+#busquedacat, #busquedafeini, #busquedafefin
+{
+    vertical-align: top;
+    display: none;
+}
+input[type=submit]:hover, input[type="text"]:hover, input[type="password"]:hover, input[type="submit"]:not(.subbutton):hover, input[type="email"]:hover, input[type="reset"]:hover, select:hover, input[type="button"]:hover
+{
+    background: rgba(255, 223, 128, 0.75);    
+}
+option
+{
+    background: black;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+}
+table
+{
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+td, tr
+{
+    padding: 0px;
+    margin: 0px;    
+}
+td.border
+{
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+}
+td.border:hover
+{
+    border-color: transparent;
+}
+#perfil h3
+{
+    margin: 0px;
+    padding: 0px;   
+    width: 190px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+#avatar
+{
+    vertical-align: middle;
+}
+#buscar
+{
+    width: 100%
+}
+
+/*                      PERFIL                      */
+
+main
+{
+    min-width: inherit;
+    margin-left: auto;
+    margin-right: auto;
+}
+section
+{
+    background: rgba(0, 0, 0, 0.80);    
+    margin-left: auto;
+    margin-right: auto;    
+    width: 90%;    
+    min-width: inherit;
+    padding: 10px;  
+    text-align: center;
+}
+section.portada
+{
+    height: 360px;
+    margin-top: 40px;    
+}
+img.portada
+{    
+    height: 100%;
+    max-width: 100%;
+}
+#avatarbig
+{
+    width: 110px;
+}
+.perfilinfo h2
+{
+    margin: 0px;
+    padding: 0px;   
+    width: 420px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+}
+input[type=submit].subbutton
+{
+    background: transparent;   
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    text-align: center;
+    color: white;
+    height: 40px;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    width: 100%
+}
+input[type=submit].subbutton:hover
+{
+    background: rgba(255, 223, 128, 0.5);
+    border-color: transparent;
+}
+#datosOpcionales, #modificar, #seguir, #dejarSeguir, #nacimiento, #genero, #pais, #ciudad, #adminvideos
+{
+    display: none;
+}
+.opcionales h3
+{
+    margin: 0px;
+    margin-bottom: 20px;
+}
+.opcionales table td
+{
+    width: 25%;
+}
+#administrarVideos
+{
+    display: none;
+    margin-top: 40px;
+    margin-bottom:20px;
+}
+
+/*                MODIFICAR PERFIL                 */
+
+section.modificarusuario
+{
+    margin-top: 40px;     
+    min-width: 500px;
+    width: 50%;
+    margin-bottom: 20px;
+}
+ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+ul:hover .imagen
+{
+    background: rgba(255, 223, 128, 0.5);
+}
+.imagen, #pregunta
+{
+    width: 100%;
+    margin-bottom: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.imagen h2
+{
+    margin: 0px 0px 20px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;    
+}
+.imagen img
+{
+    vertical-align: middle;
+}
+li{
+    width: 50%;
+    margin-bottom: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+ul li:last-child:not(.notlast)
+{
+    margin-bottom: 0px;
+}
+li input[type="text"], li input[type="password"], li input[type="submit"], li input[type="email"], li input[type="date"], li select, li input[type="reset"], input[type="button"]
+{
+    width: 100%;
+}
+p
+{
+    margin: 0px;
+}
+ul li:last-child.notlast
+{
+    margin-bottom: 20px;
+}
+input[type="file"]
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.filelabel
+{
+    background: transparent;   
+    border: 0px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;    
+    height: 40px;
+    font-size: 16px;
+    width: 99%;
+    display: inline-block;
+    line-height: 40px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -4px;
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+}
+.filelabel:hover
+{
+    background: rgba(255, 223, 128, 0.5);
+    cursor: pointer;
+    border-color: transparent;
+}
+#checkbox
+{
+    display: table;
+    height: 40px;    
+    width: 99%; 
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    font-family: sans-serif;
+}
+span
+{
+    display: table-cell;
+    vertical-align: middle;
+    width: 75%;
+
+}
+#checkbox:hover
+{
+    background: rgba(255, 223, 128, 0.5); 
+    border-color: transparent;
+}
+input[type="checkbox"], input[type="radio"]
+{
+    height: 25px;
+    width: 25px;   
+    display: table-cell;    
+    margin-top: 8px;        
+}
+input[type="date"]:not(#busquedafeini):not(#busquedafefin):not(#bandate), select:optional
+{
+    background: transparent; 
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+}
+input[type="date"]:not(#busquedafeini):not(#busquedafefin):not(#bandate):hover, select:optional:hover
+{
+    background: rgba(255, 223, 128, 0.5); 
+    border-color: transparent;
+}
+input[type="date"]#busquedafeini:hover, input[type="date"]#busquedafefin:hover
+{
+    background: rgba(255, 223, 128, 0.75); 
+}
+
+/*                  ADMISTRAR VIDEOS Y PERFIL                */
+
+input[type="text"].subtext
+{
+    background: transparent;       
+    color: white;
+    text-align: center;
+    height: 40px;
+    font-size: 16px;
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    width: 99%
+}
+input[type="text"].subtext:hover
+{
+    background: rgba(255, 223, 128, 0.5); 
+    border-color: transparent;
+}
+.filelabelreq
+{
+    background: rgba(255, 223, 128, 0.5);   
+    border: 0px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;    
+    height: 40px;
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    line-height: 40px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -4px;
+}
+.filelabelreq:hover
+{
+    background: rgba(255, 223, 128, 0.75);
+    cursor: pointer;
+}
+section.subidos
+{
+    margin-top: 40px; 
+    margin-bottom: 20px;
+}
+section.subidos:hover h2.subidos
+{
+    background: rgba(255, 223, 128, 0.5);
+}
+h2.subidos
+{
+    margin: 0px 0px 20px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;  
+}
+div.subidos
+{
+    overflow-x: auto;
+    text-align: center;
+}
+div#containerSubidos
+{
+    display: inline-table;      
+}
+div#videoSubido
+{
+    display: table-cell;
+    width: 260px;       
+}
+div#videoSubido:hover div#top
+{
+  background: rgba(255, 223, 128, 0.25);    
+}
+div#vid:hover, div#usr:hover
+{
+  background: rgba(255, 223, 128, 0.25);    
+}
+img.subidos
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+h3.subidos
+{
+    font-weight: normal;
+    text-align: center;
+    margin: 0px;
+    width: 260px;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+#titulo
+{
+    font-size: 19px;
+}
+input[type="submit"].subidos
+{
+    width: 75%;
+    margin-top: 10px;
+    background: transparent;   
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    font-size: 14px;
+}
+input[type="submit"].subidos#last
+{
+    margin-bottom: 10px;
+}
+img.subidos#usrpic
+{
+    padding-top: 05px;
+}
+img.subidos#usrpicbig
+{
+    padding-top: 10px;
+}
+input[type="submit"].subidos:hover
+{
+    background: rgba(255, 223, 128, 0.5);
+    border-color: transparent;
+}
+input[type="text"].subidos, #c2, #c3
+{
+    display: none;
+}
+.icon
+{
+    vertical-align: middle;
+}
+.stats
+{
+    table-layout: fixed;
+    width: 100%px;
+    white-space: nowrap;
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+}
+textarea
+{
+    background-color: transparent;
+    width: 98%;    
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    font-family: sans-serif;
+    resize: vertical;
+}
+textarea:hover
+{
+    border-color: transparent;
+    background-color: rgba(255, 223, 128, 0.5);
+}
+
+/*                  USUARIOS QUE SIGUEN                */
+
+div#usuarioSiguiendo
+{
+    display: table-cell;
+    width: 150px;     
+}
+div#usuarioSiguiendo:hover
+{
+  background: rgba(255, 223, 128, 0.25);
+}
+h3.siguiendo
+{
+    font-weight: normal;
+    text-align: center;
+    margin: 0px;
+    width: 150px;
+    font-size: 19px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 5px;
+}
+
+/*                  ADMINISTRAR CATEGORIAS                */
+
+input[type="color"]
+{
+    height: 40px;
+    width: 50%;
+    border: none;
+    background-color: rgba(255, 223, 128, 0.5);
+    padding: 05px;
+    margin: 0px;
+    vertical-align: middle;
+}
+input[type="color"]:hover
+{
+    background-color: rgba(255, 223, 128, 0.75);
+}
+#c1order, #c2order, #c3order, #c4order, #c5order
+{
+    width: 50%;
+    vertical-align: middle;
+}
+
+/*                  PAGINA PRINCIPAL                    */
+
+h2.subidoscat, h2.subidossec
+{
+    margin: 20px 0px 20px 0px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;  
+}
+h2.subidoscat:hover, h2.subidossec:hover, h2#togall:hover
+{
+    cursor: pointer;
+}
+h2.subidossec
+{
+    background: rgba(255, 223, 128, 0.5);
+}
+
+/*                  REPRODUCIR VIDEOS                */
+
+section.video
+{    
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+h2.video
+{
+    margin: 0px 0px 10px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;  
+}
+section.video:hover h2.video
+{
+    background-color: rgba(255, 223, 128, 0.5);
+}
+img.video
+{    
+    height: 480px;
+    width: 854px;
+}
+video
+{
+    width: 800px;
+    height: 500px;
+}
+table.video
+{
+    margin: 10px 0px;
+    table-layout: fixed;
+    width: 100%px;
+    white-space: nowrap;
+}
+td.video
+{
+    white-space: nowrap;
+    overflow: hidden;    
+    text-overflow: ellipsis;     
+}
+input[type="submit"].video
+{
+    height: 30px;
+    width: 50%;
+    background: transparent;
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    font-size: 14px;
+    visibility: hidden;
+}
+input[type="submit"].video:hover
+{
+    border-color: transparent;    
+    background: rgba(255, 223, 128, 0.5);
+}
+input[type="submit"].video#reportbutton
+{
+    border-color: rgba(255, 0, 0, 0.25);
+}
+input[type="submit"].video#reportbutton:hover
+{
+    border-color: transparent;
+    background: rgba(255, 0, 0, 0.5);
+}
+div#perfilvideo, div#anonimovideo
+{
+    padding: 06px 0px;
+    height: 100%;
+}
+div#perfilvideo:hover
+{
+    cursor:pointer;
+    background: rgba(255, 223, 128, 0.5);
+}
+div#descripcion
+{
+    overflow: hidden;    
+    text-overflow: ellipsis; 
+}
+table.coment
+{
+    margin: 10px 0px 0px;
+    table-layout: fixed;
+    width: 100%px;
+    border-collapse: collapse;
+}
+td.comentusr
+{
+    width: 25%;
+    white-space: nowrap;
+    overflow:hidden;   
+    text-overflow: ellipsis;
+    vertical-align: top;
+}
+td.comentario
+{
+    word-wrap: break-word;
+}
+#imgcoments
+{
+    margin: 0px 0px 10px;
+    table-layout: fixed;
+    width: 100%px;
+    white-space: nowrap;
+}
+section.video:hover h2#imgcoments
+{
+    background: rgba(255, 223, 128, 0.5);
+}
+.comentario textarea
+{
+    height: 86px;
+    resize: none;
+}
+section#acoment
+{
+    display: none;
+}
+
+/*                  REPORTAR VIDEOS                */
+
+ul:hover .imagen#banhead
+{
+    background: rgba(255, 0, 0, 0.5);
+}
+div#vid.ban:hover, div#usr.ban:hover
+{
+    background-color: rgba(255, 0, 0, 0.25);
+}
+input[type="submit"].ban, select.ban
+{
+    background-color: rgba(255, 0, 0, 0.5);
+}
+input[type="submit"].ban:hover, select.ban:hover
+{
+    background-color: rgba(255, 0, 0, 0.75);
+}
+input[type="submit"].bansubidos
+{
+    width: 75%;
+    margin-top: 10px;
+    background: transparent;   
+    border: solid;
+    border-color: rgba(255, 0, 0, 0.25);
+}
+input[type="submit"].bansubidos:hover
+{
+    background: rgba(255, 0, 0, 0.5);
+    border-color: transparent;
+}
+#preguntaban
+{
+    width: 100%;
+    margin-bottom: 0px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+input[type="submit"].video#baninfo
+{
+    margin-top: 10px;
+    border-color: rgba(255, 0, 0, 0.25);
+}
+input[type="submit"].video#baninfo:hover
+{
+    border-color: transparent;
+    background: rgba(255, 0, 0, 0.5);
+}
+#cantrep
+{
+    position: relative;    
+}
+#cantrep img
+{
+    vertical-align: middle;
+    margin-top: 10px;
+}
+#cantrep div
+{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 49.75%;
+    transform: translate(-50%, -50%);
+}
+#bandetails
+{
+    border-color: rgba(255, 0, 0, 0.25);
+}
+#bandetails:hover
+{
+    border-color: transparent;
+    background-color: rgba(255, 0, 0, 0.5)
+}
+#checkboxban
+{
+    display: table;
+    height: 40px;    
+    width: 100%;     
+    font-family: sans-serif;
+    background-color: rgba(255, 0, 0, 0.5); 
+}
+#checkboxban:hover
+{
+    background: rgba(255, 0, 0, 0.75);     
+}
+#bandate
+{
+    display: none;
+    background-color: rgba(255, 0, 0, 0.5);    
+}
+#bandate:hover
+{    
+    background-color: rgba(255, 0, 0, 0.75)
+}
+h2.subidosban
+{
+    margin: 20px 0px 20px 0px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;  
+}
+h2.subidosban
+{
+    background: rgba(255, 0, 0, 0.5);
+}

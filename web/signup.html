@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/sesion.css">
+        <script src="js/signup.js"></script>
+        <script>
+            var Mexico = ['Monterrey', 'Guadalajara', 'Tijuana'];
+            var EstadosUnidos = ['New York', 'Chicago', 'Seatle'];
+            var Canada = ['Montreal', 'Edmonton', 'Waterloo'];
+
+            function UpdateCities()
+            {   
+                var paises = document.getElementById('countries');
+                var ciudades = document.getElementById('cities');
+                switch (paises.value) 
+                {
+                    case 'Mexico':
+                        FillCities(ciudades, Mexico);
+                        break;
+                    case 'Estados Unidos':
+                        FillCities(ciudades, EstadosUnidos);
+                        break;
+                    case 'Canada':
+                        FillCities(ciudades, Canada);
+                        break;
+                    default:
+                        ciudades.options.length = 0;
+                        break;
+                }
+            }
+            function FillCities(select, options)
+            {
+                select.options.length = 0;
+                for (i = 0; i < options.length; i++) 
+                {
+                    var opt = new Option(options[i], options[i]);
+                    select.options.add(opt);
+                }
+                var ph = new Option("Ciudad", "");
+                ph.setAttribute("disabled", true);
+                ph.setAttribute("selected", true);
+                ph.setAttribute("hidden", true);
+                select.options.add(ph);
+            }    
+        </script>
+        <title>Crear Cuenta - La Hoguera</title>
+    </head>
+    <body>
+        <header>
+            <a href="login.jsp"><img src="css/img/LaHoguera.png" alt="LOGO" height="90" width="500"></a>
+        </header>
+        <form enctype="multipart/form-data" action="signup" method="post" onsubmit="return ValidateForm(this)">
+            <section>              
+                <ul>
+                    <li class="imagen">
+                        <img src="css/img/Summon.png" alt="SIGNUP" height="60">
+                    </li>
+                    <li>
+                        <p>Usuario</p>
+                        <input type="text" name="USERNAME" placeholder="Nombre de usuario" required> 
+                        <input type="email" name="EMAIL" placeholder="Correo Electronico" required> 
+                    </li>
+                    <li>
+                        <p>Contraseña</p>
+                        <input type="password" name="PASSWORD" placeholder="Contraseña" required id="pass">
+                        <input type="password" placeholder="Repetir Contraseña" required id="repass">
+                    </li> 
+                    <li class="notlast">
+                        <p>Pregunta Secreta</p>
+                        <select name="QUESTION" required>
+                            <option value="" disabled selected hidden>Pregunta</option>
+                            <option value="Primer Jefe que me mato?">Porque estoy en llamas?</option>
+                            <option value="Que anillos tienes?">Que anillos tienes?</option>
+                            <option value="La leyenda nunca muere?">La leyenda nunca muere?</option>                            
+                        </select>
+                        <input type="text" name="ANSWER" placeholder="Respuesta" required> 
+                    </li>                              
+                </ul> 
+                <ul>
+                    <li class="imagen">
+                        <h2>
+                            Opcionales
+                        </h2>
+                    </li>
+                    <li>    
+                        <p>Imagenes</p>
+                        <input type="file" id="avatarfile" name="PROFILE" accept=".jpg, .jpeg, .png" onchange="UpdateAvatar()">
+                        <label class="filelabel" id="avatarlabel" for="avatarfile">
+                        Perfil
+                        </label>                       
+                        <input type="file" id="coverfile" name="COVER" accept=".jpg, .jpeg, .png" onchange="UpdateCover()">
+                        <label class="filelabel" id="coverlabel" for="coverfile">
+                        Portada
+                        </label>
+                    </li>
+                    <li>
+                        <p>Fecha de Nacimiento</p>
+                        <input type="date" name="BIRTHDATE">
+                    </li>
+                    <li>   
+                        <p>Genero</p>
+                        <label>
+                            <div id="checkbox">
+                            <input type="radio" name="GENDER" value="Hombre">
+                            <span>Hombre</span>
+                            </div>
+                        </label>
+                        <label>
+                            <div id="checkbox">
+                            <input type="radio" name="GENDER" value="Mujer">
+                            <span>Mujer</span>
+                            </div>
+                        </label>
+                    </li>   
+                    <li class="notlast">
+                        <p>Lugar de Residencia</p>
+                        <select name="COUNTRY" id="countries" onchange="UpdateCities()">
+                            <option value="" disabled selected hidden>Pais</option>
+                            <option value="Mexico">Mexico</option>
+                            <option value="Estados Unidos">Estados Unidos</option>
+                            <option value="Canada">Canada</option>                            
+                        </select>
+                        <select name="CITY" id="cities">
+                            <option value="" disabled selected hidden>Ciudad</option>
+                        </select>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <input type="submit" value="Crear Cuenta">
+                    </li>
+                </ul>
+            </section>
+            <section id="signup">
+                <ul>
+                    <li class="imagen">
+                        <img src="css/img/Tools.png" alt="OPTIONS" height="60">
+                    </li>
+                    <li>
+                        <input type="reset" value="Reiniciar Campos" onclick="UndoChanges()">
+                    </li> 
+                </ul>
+            </section>
+        </form>            
+    </body>    
+</html>

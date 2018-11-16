@@ -1,0 +1,266 @@
+/* ESTO SE USA EN INICIO DE SESION, CREACION DE CUENTA Y RECUPERAR CONTRASENA */
+
+body{
+    margin: 0px;
+    background:url(img/DarkSoulsBackground2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: fantasy sans-serif;   
+    min-width: 500px;
+}
+header{   
+    margin-top: 20px;     
+    background: rgba(0, 0, 0, 0.80);
+    text-align: center;
+    min-width: inherit;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;  
+    padding: 10px;
+}
+header a img
+{
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    vertical-align: middle;
+}
+header a:hover img
+{
+    background: rgba(255, 223, 128, 0.5);
+    border-color: transparent;
+}
+section
+{   
+    margin-top: 40px;     
+    background: rgba(0, 0, 0, 0.80);
+    min-width: inherit;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;  
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+ul:hover .imagen
+{
+    background: rgba(255, 223, 128, 0.5);
+}
+h2{
+    margin: 0px 0px 20px;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;    
+}
+ul
+{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+.imagen, #pregunta
+{
+    width: 100%;
+    margin-bottom: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+.imagen img
+{
+    vertical-align: middle;   
+}
+h3
+{
+    margin: 0px;
+    padding: 0px;
+    overflow:auto;    
+}
+a h3
+{
+    font-weight: normal;
+    font-size: 16px;
+}
+li{
+    width: 50%;
+    margin-bottom: 20px; 
+    margin-left: auto;
+    margin-right: auto;
+}
+ul li:last-child:not(.notlast)
+{
+    margin-bottom: 0px;
+}
+input[type="text"], input[type="password"], input[type="submit"], input[type="email"], input[type="date"], select, input[type="reset"]
+{
+    background: rgba(255, 223, 128, 0.5);   
+    border: 0px;
+    color: white;
+    text-align: center;    
+    height: 40px;
+    font-size: 16px;
+    width: 100%;
+}
+::placeholder
+{
+    color: white;
+    opacity: 1;
+}
+input[type="date"], select:optional
+{
+    background: transparent; 
+}
+input[type="date"]:hover, select:optional:hover
+{
+    background: rgba(255, 223, 128, 0.5); 
+}
+input[type="text"]:hover, input[type="password"]:hover, input[type="submit"]:hover, input[type="email"]:hover, input[type="reset"]:hover, select:hover
+{    
+    background: rgba(255, 223, 128, 0.75); 
+}
+input[type="submit"]:hover, input[type="reset"]:hover
+{
+cursor: pointer;
+}
+input[type="checkbox"], input[type="radio"]
+{
+    height: 25px;
+    width: 25px;   
+    display: table-cell;    
+    margin-top: 8px;        
+}
+input[type="date"], select:optional
+{
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+}
+input[type="date"]:hover, select:optional:hover
+{
+    border-color: transparent;
+}
+#checkbox
+{
+    display: table;
+    height: 40px;    
+    width: 98%; 
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+    font-family: sans-serif;
+}
+span
+{
+    display: table-cell;
+    vertical-align: middle;
+    width: 75%;
+
+}
+#checkbox:hover
+{
+    background: rgba(255, 223, 128, 0.5); 
+    border-color: transparent;
+}
+.fakebutton
+{
+    background: rgba(255, 223, 128, 0.5); 
+    border: 0px;
+    color: white;
+    text-align: center;    
+    height: 40px;  
+}
+.fakebutton:hover
+{
+    background: rgba(255, 223, 128, 0.75);
+}
+ul a 
+{
+    font-family: sans-serif;
+    font-size: 16px;    
+    color: white;
+    text-decoration: none; 
+    line-height: 40px
+}
+.fb2
+{
+    background: transparent; 
+    border: 0px;
+    color: white;
+    text-align: center;    
+    height: 40px;  
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25); 
+}
+.fb2:hover
+{
+    background: rgba(255, 223, 128, 0.5);
+    border-color: transparent;
+}
+
+/*        LO DE ABAJO SOLO SE USA EN CREACION DE CUENTA           */
+
+#signup
+{
+    margin-bottom: 20px;    
+}
+p
+{
+    margin: 0px;
+}
+option
+{
+    background: black;
+}
+ul li:last-child.notlast
+{
+    margin-bottom: 20px;
+}
+input[type="file"]
+{
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+.filelabel
+{
+    background: transparent;   
+    border: 0px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;    
+    height: 40px;
+    font-size: 16px;
+    width: 100%;
+    display: inline-block;
+    line-height: 40px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    margin-bottom: -4px;
+    border: solid;
+    border-color: rgba(255, 223, 128, 0.25);
+}
+.filelabel:hover
+{
+    background: rgba(255, 223, 128, 0.5);
+    cursor: pointer;
+    border-color: transparent;
+}
+
+/*        LO DE ABAJO SOLO SE USA EN RECUPERAR CONTRASENA           */
+
+.hiddeninputs
+{
+    display:none;
+}
+
+#rc1
+{
+    margin-bottom: 20px; 
+    display: block;
+}
+
+#rc2, #rc3
+{
+    margin-bottom: 20px; 
+    display: none;
+}
